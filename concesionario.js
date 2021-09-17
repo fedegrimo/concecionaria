@@ -4,25 +4,22 @@ let concesionaria = {
    autos: autos,
  
    buscarAuto: function (patente) {
-    let nuevaPatente=null;
+    let autoEncontrado=null;
      autos.forEach(function(val){
             if (val.patente == patente){
-                nuevaPatente = val.patente;
+                autoEncontrado = val ;
             } 
       });
-      return nuevaPatente;
+      return autoEncontrado;
    },
-   buscarAutoFor: function (patente) {
+   venderAuto: patente => {
+    let obj = concesionaria.buscarAuto(patente);
+    if (obj != null){
+        return obj.vendido;
+    }
     
-    for (let i=0; i< autos.length; i++){
-           if (autos[i].patente == patente){
-              return autos[i].patente;
-           }  else {
-               return null;
-           }
-     }
-     
-  }
+   },
+   autosParaLaVenta : () =>{}
 }
 
-console.log(concesionaria.buscarAuto("APL1s23"));
+concesionaria.venderAuto('APLs123');
