@@ -18,7 +18,18 @@ let autos = [{
     cuotas: 14,
     anio: 2019,
     patente: "JJK116",
-    vendido: false
+    vendido: true
+},
+{
+    marca: "Toyota",
+    modelo: "Hilux",
+    precio: 340000,
+    km: 80,
+    color: "Blanco",
+    cuotas: 12,
+    anio: 2019,
+    patente: "MDQ120",
+    vendido: true
 }];
 
 module.exports = autos;
